@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,48 @@
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 
-<body>   
-    
+<body>
 
 
-    <h1 id="tittle" class="playwrite-nz-basic" >your celebrity soulmate</h1>
-    
+
+    <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
+
     <div id="userphoto" class="playwrite-nz-basic">
         <div id="importPhotoButton">upload your photo</div>
         <video id="webcamVideo" autoplay></video>
     </div>
-   
-     
-    
-<script>
-    const video = document.getElementById('webcamVideo');
+    <div id="preference">
+        <form action="">
+            <form>
+                <label for="preference">i am interested in:</label><br> 
+                <input type="checkbox" id="preferenceMen" name="preferenceMen" value="men">
+                <label for="preferenceMen"> men</label><br>
+                <input type="checkbox" id="preferenceWoman" name="preferenceWoman" value="woman">
+                <label for="preferenceWoman"> woman</label><br>
+                
+            </form>
 
-    // navigator.mediaDevices.getUserMedia({ video: true })
-    //     .then(stream => {
-    //         video.srcObject = stream;
-            
-    //     })
-    //     .catch(error => {
-    //         console.error('Error accessing webcam:', error);
-    //     });
-  
-const stream = video?.srcObject;
-const videoTrack = stream?.getTracks()?.find(track => track.kind === "video");
-const videoID = videoTrack?.getSettings().deviceId;
-</script>
+        </form>
+    </div>
+
+
+
+    <script>
+        const video = document.getElementById('webcamVideo');
+
+        // navigator.mediaDevices.getUserMedia({ video: true })
+        //     .then(stream => {
+        //         video.srcObject = stream;
+
+        //     })
+        //     .catch(error => {
+        //         console.error('Error accessing webcam:', error);
+        //     });
+
+        const stream = video?.srcObject;
+        const videoTrack = stream?.getTracks()?.find(track => track.kind === "video");
+        const videoID = videoTrack?.getSettings().deviceId;
+    </script>
 </body>
+
 </html>
