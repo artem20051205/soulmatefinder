@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <script src="./main.js" defer></script>
 </head>
 
 <body>
-    <div id ="container">
+    <div id="container">
 
-        <h1 id="tittle" class="playwrite-nz-basic" class =>Find your celebrity</h1>
+        <h1 id="tittle" class="playwrite-nz-basic">Find your celebrity</h1>
 
-    </div>
-     
-    
-
+        <div>
+            <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto()">Get random photo</button>
+        </div>
+        <div id="foto_container">
+            <img id="photo" src="main.js" alt="Random Celebrity Photo" width="300" height="400">
+        <img src="" alt="">
+        </div>
 </body>
+
 </html>
