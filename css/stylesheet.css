@@ -1,0 +1,33 @@
+.left {
+  width: 80px;
+  height: 120px;
+  background-color: red;
+  display: block;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(-50deg);
+  left: 60px;
+  position: absolute;
+  background: #2A7B9B;
+background: linear-gradient(50deg, rgb(233, 1, 1) 50%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.right {
+  width: 80px;
+  height: 120px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(50deg);
+
+  
+background: #2A7B9B;
+background: linear-gradient(-50deg, rgb(226, 6, 6) 50%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.heart {
+  position: relative;
+}
