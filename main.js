@@ -1,4 +1,3 @@
-
 let photos_mens = [
     "man/Albert Einstein.png",
     "man/Atkinson_Rowan_crop.jpg",
@@ -42,13 +41,25 @@ let fotos_vrouw = [
     "vrouw/Cleopatra.png"
 ];
 
-function getRandomPhoto() {
-    const photos = photos_mens; 
-    if (photos.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * photos.length);
-    const photo = photos[randomIndex];
-    const img = document.getElementById('photo');
-    console.log(photo);
+function getRandomPhoto(choice) {
+    const photos1 = photos_mens;
+    const photos2 = fotos_vrouw;
+    if (choice === "man") {
+        if (photos1.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * photos1.length);
+        const photo = photos1[randomIndex];
+        const img = document.getElementById('photo');
+        img.src = photo;
+        console.log(photo);
+    } else if (choice === "vrouw") {
+        if (photos2.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * photos2.length);
+        const photo = photos2[randomIndex];
+        const img = document.getElementById('photo');
+        img.src = photo;
+        console.log(photo);
+    }
 }
+
 
 
