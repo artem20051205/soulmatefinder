@@ -9,40 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <script src="./main.js" defer></script>
-    <link src="./main.js" defer></link>
+    <script src="/main.js" defer></script>
 </head>
 
 <body>
-
-
-
     <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
+    <div class="main-container">
+        <div class="left-section">
+            <div id="preference">
 
-    <div id="userphoto" class="playwrite-nz-basic">
-        <div id="importPhotoButton">upload your photo</div>
-        <video id="webcamVideo" autoplay></video>
-    </div>
-    <div id="preference">
-        <form action="">
-            <form>
-                <label for="preference">i am interested in:</label><br> 
-                <input type="checkbox" id="preferenceMen" name="preferenceMen" value="men">
-                <label for="preferenceMen"> men</label><br>
-                <input type="checkbox" id="preferenceWoman" name="preferenceWoman" value="woman">
-                <label for="preferenceWoman"> woman</label><br>
-                
-            </form>
-
-        </form>
-    </div>
-        <div> 
-            <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto('man')">Get random photo</button>
+                <div id="userphoto" class="playwrite-nz-basic">
+                    <div id="importPhotoButton">upload your photo</div>
+                    <video id="webcamVideo" autoplay></video>
+                </div>
+                <form>
+                    <label for="preference">i am interested in:</label><br>
+                    <input type="checkbox" id="preferenceMen" name="preferenceMen" value="men">
+                    <label for="preferenceMen"> men</label><br>
+                    <input type="checkbox" id="preferenceWoman" name="preferenceWoman" value="woman">
+                    <label for="preferenceWoman"> woman</label><br>
+                </form>
+            </div>
         </div>
-        <div>
-            <img id="photo" src="main.js" alt="Random Celebrity Photo" width="300" height="400">
-        <img src="" alt="">
-
+        <div class="center-section">
+            <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto('man')">Get your soulmate</button>
+        </div>
+        <div class="right-section">
+            <img id="photo" src="" alt="Random Celebrity Photo" width="300" height="400">
+        </div>
+    </div>
 
     <script>
         const video = document.getElementById('webcamVideo');
