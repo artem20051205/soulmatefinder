@@ -19,10 +19,18 @@
 
     <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
 
-    <div id="userphoto" class="playwrite-nz-basic">
-        <div id="importPhotoButton">upload your photo</div>
+    
+        <div id="importPhoto">
+            <div id="importPhotoButton">
+                <input type="file" accept="image/*" name="image" id="file" style="display: none;"onchange="loadFile(event)">
+                <label for="file" id="import">upload</label>
+            </div>
+            <div id="imgBox">
+                
+            </div>
+        </div>
         <video id="webcamVideo" autoplay></video>
-    </div>
+    
     <div id="preference">
         <form action="">
             <form>
@@ -45,20 +53,11 @@
 
 
     <script>
-        const video = document.getElementById('webcamVideo');
+        var textbox = document.getElementById("imgBox");
+        var loadFile = function(event){
+            imgBox.style.backgroundImage = "url(" +URL.createObjectURL(event.target.files[0]) + ")";
+        }
 
-        // navigator.mediaDevices.getUserMedia({ video: true })
-        //     .then(stream => {
-        //         video.srcObject = stream;
-
-        //     })
-        //     .catch(error => {
-        //         console.error('Error accessing webcam:', error);
-        //     });
-
-        const stream = video?.srcObject;
-        const videoTrack = stream?.getTracks()?.find(track => track.kind === "video");
-        const videoID = videoTrack?.getSettings().deviceId;
     </script>
 </body>
 
