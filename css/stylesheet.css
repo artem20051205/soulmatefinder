@@ -22,7 +22,7 @@
 }
 
 body {
-    background-image: url(https://cdn.discordapp.com/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=698339fc&is=6981e87c&hm=646e4b35c599589f8187930021df582245ce59938d88a947bf5e4ae7bd851b74&);
+    background-image: url(https://cdn.discordapp.com/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=6985343c&is=6983e2bc&hm=993d3b946527de766483c5e9d27f82868483b6c0cbe49fc0360b8f7ecd3b7432&);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -136,7 +136,7 @@ body {
 
   background: linear-gradient(
     50deg,
-    rgb(233, 1, 1) <?= $rand ?>%,
+    rgb(233, 1, 1) >?= $rand ?>%,
     rgba(87, 199, 133, 1) 50%,
     rgba(237, 221, 83, 1) 100%
   );
