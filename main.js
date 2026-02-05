@@ -95,7 +95,7 @@ function getRandomPhoto(choice) {
         console.log(photo);
     }
 
-    
+
     console.log("storePreviousImage called");
     const img = document.getElementById('photo');
     const currentSrc = img.src;
@@ -104,12 +104,34 @@ function getRandomPhoto(choice) {
         previousimages.push(currentSrc);
         console.log(previousimages);
     }
-   if (currentSrc) {
-    previousimages.push(currentSrc);
-    localStorage.setItem("previousimages", JSON.stringify(previousimages));
+    if (currentSrc) {
+        previousimages.push(currentSrc);
+        localStorage.setItem("previousimages", JSON.stringify(previousimages));
+    }
+    console.log("saved =" + saved)
+
+    // Één random percentage voor links & rechts
+    const rand = Math.floor(Math.random() * (40 - 5 + 1)) + 5;
+
+    document.querySelector('.left').style.background =
+        `linear-gradient(
+      50deg,
+      rgb(233, 1, 1) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
+
+    document.querySelector('.right').style.background =
+        `linear-gradient(
+      -50deg,
+      rgb(226, 6, 6) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
 }
-console.log("saved =" + saved)
-    
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
 }
 
 
