@@ -30,14 +30,14 @@ body {
 }
 #userphoto{
     margin-top: 150px;
-    border: #ffffff 2px solid;
+    
     height: 400px;
     width: 400px;
 }
 #importPhoto{
   
     margin-top: 150px;
-    border: #ffffff 2px solid;
+    
     height: 460px;
     width: 400px;
 }
@@ -51,8 +51,8 @@ body {
 }
 #importPhoto{
   
-    margin-top: 150px;
-    border: #ffffff 2px solid;
+    margin-top: 850px;
+    
     height: 460px;
     width: 400px;
 }
