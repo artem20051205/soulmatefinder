@@ -3,6 +3,7 @@
     font-weight: bold;
     color: #ffffff;
     color: #ffffff;
+    color: #ffffff;
     margin-left: 500px;
 }
 
@@ -14,6 +15,7 @@
 }
 
     
+
 
 #backgound{
  width: 100%;
@@ -45,11 +47,27 @@ body {
     margin-left: 37px;
     background-size: cover;
 }
+#importPhoto{
+  
+    margin-top: 150px;
+    border: #ffffff 2px solid;
+    height: 460px;
+    width: 400px;
+}
+#imgBox{
+    height: 400px;
+    width: 325px;
+    background-color: rgb(86, 77, 77);
+    margin-top: -500px;
+    margin-left: 37px;
+    background-size: cover;
+}
 #importPhotoButton{
     height: 50px;
     width: 200px;
     background-color: #ffffff;
     margin-left: 100px;
+    margin-top: 380px;
     margin-top: 380px;
     text-align: center;
     font-weight: bold;
@@ -60,6 +78,7 @@ body {
 }
 
 #preference{
+    margin-top: -850px;
     margin-top: -850px;
     margin-left: 50px;
     color: #ffffff;
@@ -101,4 +120,37 @@ body {
     flex: 1;
     text-align: center;
     padding: 20px;
+}
+.left {
+  width: 80px;
+  height: 120px;
+  background-color: red;
+  display: block;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(-50deg);
+  left: 60px;
+  position: absolute;
+  background: #2A7B9B;
+background: linear-gradient(50deg, rgb(233, 1, 1) 20%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.right {
+  width: 80px;
+  height: 120px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(50deg);
+
+  
+background: #2A7B9B;
+background: linear-gradient(-50deg, rgb(226, 6, 6) 20%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.heart {
+  position: relative;
 }
