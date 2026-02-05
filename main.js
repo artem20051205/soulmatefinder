@@ -111,8 +111,10 @@ function getRandomPhoto(choice) {
     console.log("saved =" + saved)
 
     // Één random percentage voor links & rechts
-    const rand = Math.floor(Math.random() * (40 - 5 + 1)) + 5;
+    const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
 
+    const percentageText = document.getElementById('percentage');
+    console.log("rand ====================================================================================================================== " + rand);
     document.querySelector('.left').style.background =
         `linear-gradient(
       50deg,
@@ -128,6 +130,8 @@ function getRandomPhoto(choice) {
       rgba(87, 199, 133, 1) 50%,
       rgba(237, 221, 83, 1) 100%
     )`;
+
+    percentageText.textContent = `Gevuld: ${rand}% `;
 }
 function choosePhoto() {
     const gender = document.getElementById("genderSelect").value;
