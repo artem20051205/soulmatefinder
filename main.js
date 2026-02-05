@@ -60,6 +60,29 @@ function getRandomPhoto(choice) {
         img.src = photo;
         console.log(photo);
     }
+
+
+  // Één random percentage voor links & rechts
+  const rand = Math.floor(Math.random() * (40 - 5 + 1)) + 5;
+
+  document.querySelector('.left').style.background =
+    `linear-gradient(
+      50deg,
+      rgb(233, 1, 1) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
+
+  document.querySelector('.right').style.background =
+    `linear-gradient(
+      -50deg,
+      rgb(226, 6, 6) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
+
+
 }
+
 
 
