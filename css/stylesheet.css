@@ -1,3 +1,107 @@
+#tittle {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    color: #ffffff;
+    margin-left: 500px;
+}
+
+.playwrite-nz-basic  {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+    
+
+#backgound{
+ width: 100%;
+}
+
+body {
+    background-image: url(https://cdn.discordapp.com/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=698339fc&is=6981e87c&hm=646e4b35c599589f8187930021df582245ce59938d88a947bf5e4ae7bd851b74&);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#userphoto{
+    margin-top: 150px;
+    border: #ffffff 2px solid;
+    height: 400px;
+    width: 400px;
+}
+#importPhoto{
+  
+    margin-top: 150px;
+    border: #ffffff 2px solid;
+    height: 460px;
+    width: 400px;
+}
+#imgBox{
+    height: 400px;
+    width: 325px;
+    background-color: rgb(86, 77, 77);
+    margin-top: -500px;
+    margin-left: 37px;
+    background-size: cover;
+}
+#importPhotoButton{
+    height: 50px;
+    width: 200px;
+    background-color: #ffffff;
+    margin-left: 100px;
+    margin-top: 380px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#preference{
+    margin-top: -850px;
+    margin-left: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+#foto_container {
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+#import{
+ display: block;
+    width: 100%;
+    height: 115%;
+    line-height: 50px; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000; 
+    cursor: pointer;
+   
+    margin-top: -7px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.left-section, .center-section, .right-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
 .left {
   width: 80px;
   height: 120px;
