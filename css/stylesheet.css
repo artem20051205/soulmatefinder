@@ -9,7 +9,7 @@
   left: 60px;
   position: absolute;
   background: #2A7B9B;
-background: linear-gradient(50deg, rgb(233, 1, 1) 50%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+background: linear-gradient(50deg, rgb(233, 1, 1) 20%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }
 
 .right {
@@ -26,7 +26,7 @@ background: linear-gradient(50deg, rgb(233, 1, 1) 50%, rgba(87, 199, 133, 1) 50%
 
   
 background: #2A7B9B;
-background: linear-gradient(-50deg, rgb(226, 6, 6) 50%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+background: linear-gradient(-50deg, rgb(226, 6, 6) 20%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }
 .heart {
   position: relative;
