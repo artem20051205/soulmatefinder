@@ -9,52 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <script src="/main.js" defer></script>
+    <script src="./main.js" defer></script>
+    <link src="./main.js" defer>
+    </link>
 </head>
 
 <body>
     <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
-    <div class="main-container">
-        <div class="left-section">
-            <div id="preference">
 
-                <div id="userphoto" class="playwrite-nz-basic">
-                    <div id="importPhotoButton">upload your photo</div>
-                    <video id="webcamVideo" autoplay></video>
+    <div id="main-container" class="main-container">
+        <div class="left-section">
+            <div id="importPhoto">
+                <div id="importPhotoButton">
+                    <input type="file" accept="image/*" name="image" id="file" style="display: none;"
+                        onchange="loadFile(event)">
+                    <label for="file" id="import">upload</label>
                 </div>
-                <form>
-                    <label for="preference">i am interested in:</label><br>
-                    <input type="checkbox" id="preferenceMen" name="preferenceMen" value="men">
-                    <label for="preferenceMen"> men</label><br>
-                    <input type="checkbox" id="preferenceWoman" name="preferenceWoman" value="woman">
-                    <label for="preferenceWoman"> woman</label><br>
-                </form>
+                <div id="imgBox">
+                </div>
             </div>
         </div>
+        
         <div class="center-section">
-            <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto('man')">Get your soulmate</button>
+            <div>
+                <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto('man')">Get random
+                    photo</button>
+            </div>
         </div>
-        <div class="right-section">
-            <img id="photo" src="" alt="Random Celebrity Photo" width="300" height="400">
+        <div id="right-section">
+            <div>
+                <img id="photo" src="main.js" alt="Random Celebrity Photo" width="300" height="400">
+                <img src="" alt="">
+                <script>
+                    var textbox = document.getElementById("imgBox");
+                    var loadFile = function (event) {
+                        imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                    }
+
+                </script>
+            </div>
         </div>
-    </div>
-
-    <script>
-        const video = document.getElementById('webcamVideo');
-
-        // navigator.mediaDevices.getUserMedia({ video: true })
-        //     .then(stream => {
-        //         video.srcObject = stream;
-
-        //     })
-        //     .catch(error => {
-        //         console.error('Error accessing webcam:', error);
-        //     });
-
-        const stream = video?.srcObject;
-        const videoTrack = stream?.getTracks()?.find(track => track.kind === "video");
-        const videoID = videoTrack?.getSettings().deviceId;
-    </script>
 </body>
 
 </html>

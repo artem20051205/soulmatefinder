@@ -1,38 +1,87 @@
-:root {
-    --panel-border: 2px solid #ffffff;
-    --panel-bg: rgba(0, 0, 0, 0.45);
-}
-
 #tittle {
     font-size: 50px;
     font-weight: bold;
     color: #ffffff;
-    text-align: center;
-    margin: 32px 16px 24px;
+    margin-left: 500px;
 }
 
-.playwrite-nz-basic {
-    font-family: "Playwrite NZ Basic", cursive; 
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
+.playwrite-nz-basic  {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
-/*
+
+    
+
+#backgound{
+ width: 100%;
+}
+
 body {
     background-image: url(https://cdn.discordapp.com/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=698339fc&is=6981e87c&hm=646e4b35c599589f8187930021df582245ce59938d88a947bf5e4ae7bd851b74&);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
-    color: #ffffff;
-    min-height: 100vh;
 }
-*/
-body {
-    background-image: url(https://cdn.discordapp.com/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=698339fc&is=6981e87c&hm=646e4b35c599589f8187930021df582245ce59938d88a947bf5e4ae7bd851b74&);
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+#userphoto{
+    margin-top: 150px;
+    border: #ffffff 2px solid;
+    height: 400px;
+    width: 400px;
+}
+#importPhoto{
+  
+    margin-top: 150px;
+    border: #ffffff 2px solid;
+    height: 460px;
+    width: 400px;
+}
+#imgBox{
+    height: 400px;
+    width: 325px;
+    background-color: rgb(86, 77, 77);
+    margin-top: -500px;
+    margin-left: 37px;
+    background-size: cover;
+}
+#importPhotoButton{
+    height: 50px;
+    width: 200px;
+    background-color: #ffffff;
+    margin-left: 100px;
+    margin-top: 380px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#preference{
+    margin-top: -850px;
+    margin-left: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+#foto_container {
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+#import{
+ display: block;
+    width: 100%;
+    height: 115%;
+    line-height: 50px; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000; 
+    cursor: pointer;
+   
+    margin-top: -7px;
 }
 
 .main-container {
@@ -40,7 +89,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -51,117 +100,4 @@ body {
     flex: 1;
     text-align: center;
     padding: 20px;
-}
-#userphoto {
-    margin: 0 auto 32px;
-    border: var(--panel-border);
-    height: 400px;
-    width: 400px;
-    max-width: 90vw;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-#webcamVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-#importPhotoButton {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    height: 44px;
-    width: 220px;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 44px;
-    cursor: pointer;
-    border-radius: 24px;
-}
-
-.three-column {
-    display: flex;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: stretch;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px 48px;
-}
-
-.panel {
-    border: var(--panel-border);
-    background: var(--panel-bg);
-    padding: 16px;
-    border-radius: 12px;
-    min-height: 160px;
-    flex: 1;
-}
-
-#preference {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#preferenceForm {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.panel-title {
-    font-size: 20px;
-}
-
-.check-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: normal;
-}
-
-.center-panel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#foto_button {
-    font-size: 18px;
-    padding: 12px 20px;
-    border-radius: 24px;
-    border: none;
-    cursor: pointer;
-}
-
-#result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 900px) {
-    .three-column {
-        flex-direction: column;
-    }
-
-    .panel {
-        width: 100%;
-    }
 }
