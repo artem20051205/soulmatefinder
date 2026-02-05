@@ -1,4 +1,8 @@
 
+
+
+
+
 let photos_mens = [
     "man/Albert Einstein.png",
     "man/Atkinson_Rowan_crop.jpg",
@@ -57,6 +61,13 @@ let fotos_vrouw = [
     "vrouw/zendaya.png"
 ];
 
+let previousimages = [];
+
+const saved = localStorage.getItem("previousimages");
+if (saved) {
+    previousimages = JSON.parse(saved);
+}
+
 function getRandomPhoto(choice) {
     const photos1 = photos_mens;
     const photos2 = fotos_vrouw;
@@ -83,8 +94,55 @@ function getRandomPhoto(choice) {
         img.src = photo;
         console.log(photo);
     }
-    
+
+
+    console.log("storePreviousImage called");
+    const img = document.getElementById('photo');
+    const currentSrc = img.src;
+    console.log(currentSrc);
+    if (currentSrc) {
+        previousimages.push(currentSrc);
+        console.log(previousimages);
+    }
+    if (currentSrc) {
+        previousimages.push(currentSrc);
+        localStorage.setItem("previousimages", JSON.stringify(previousimages));
+    }
+    console.log("saved =" + saved)
+
+    // Één random percentage voor links & rechts
+    const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
+
+    const percentageText = document.getElementById('percentage');
+    console.log("rand ====================================================================================================================== " + rand);
+    document.querySelector('.left').style.background =
+        `linear-gradient(
+      50deg,
+      rgb(233, 1, 1) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
+
+    document.querySelector('.right').style.background =
+        `linear-gradient(
+      -50deg,
+      rgb(226, 6, 6) ${rand}%,
+      rgba(87, 199, 133, 1) 50%,
+      rgba(237, 221, 83, 1) 100%
+    )`;
+
+    percentageText.textContent = `Gevuld: ${rand}% `;
 }
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
+}
+
+
+
+
+
+
 
 
 function choosePhoto() {
