@@ -38,7 +38,22 @@ let photos_mens = [
 ];
 
 let fotos_vrouw = [
-    "vrouw/Cleopatra.png"
+    "vrouw/Cleopatra.png",
+    "vrouw/adele.png",
+    "vrouw/barbie.png",
+    "vrouw/bellapoarch.png",
+    "vrouw/blackwidow.png",
+    "vrouw/Cleopatra.png",
+    "vrouw/dojacat.png",
+    "vrouw/ellsafrozen.png",
+    "vrouw/galgadot.png",
+    "vrouw/gorlock.png",
+    "vrouw/harleyquin.png",
+    "vrouw/meganfox.png",
+    "vrouw/nickiminaj.png",
+    "vrouw/pokimaine.png",
+    "vrouw/wednesday.png",
+    "vrouw/zendaya.png"
 ];
 
 
@@ -56,6 +71,14 @@ function getRandomPhoto(choice) {
         if (photos2.length === 0) return;
         const randomIndex = Math.floor(Math.random() * photos2.length);
         const photo = photos2[randomIndex];
+        const img = document.getElementById('photo');
+        img.src = photo;
+        console.log(photo);
+    } else if (choice === "random") {
+        const allPhotos = photos1.concat(photos2);
+        if (allPhotos.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * allPhotos.length);
+        const photo = allPhotos[randomIndex];
         const img = document.getElementById('photo');
         img.src = photo;
         console.log(photo);
