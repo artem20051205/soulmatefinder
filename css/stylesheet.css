@@ -165,3 +165,8 @@ body {
   width: 200px;
   height: 150px;
 }
+#previousPhoto{
+    position: absolute;
+    margin-left: -100px;
+    margin-top:50px;
+}

@@ -99,11 +99,7 @@ function getRandomPhoto(choice) {
     console.log("storePreviousImage called");
     const img = document.getElementById('photo');
     const currentSrc = img.src;
-    console.log(currentSrc);
-    if (currentSrc) {
-        previousimages.push(currentSrc);
-        console.log(previousimages);
-    }
+
     if (currentSrc) {
         previousimages.push(currentSrc);
         localStorage.setItem("previousimages", JSON.stringify(previousimages));
@@ -135,7 +131,21 @@ function choosePhoto() {
 }
 
 
+function showPreviousPhoto() {
+      if (previousimages.length < 2) {
+        alert("Geen vorige foto beschikbaar");
+        return;
+    }
+     previousimages.pop();
 
+    // pak vorige
+    const previousPhoto = previousimages[previousimages.length - 1];
+
+    document.getElementById("photo").src = previousPhoto;
+
+    // update localStorage
+    localStorage.setItem("previousimages", JSON.stringify(previousimages));
+}
 
 
 
