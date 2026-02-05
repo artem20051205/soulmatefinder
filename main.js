@@ -41,6 +41,7 @@ let fotos_vrouw = [
     "vrouw/Cleopatra.png"
 ];
 
+
 function getRandomPhoto(choice) {
     const photos1 = photos_mens;
     const photos2 = fotos_vrouw;
@@ -61,5 +62,17 @@ function getRandomPhoto(choice) {
     }
 }
 
+let previousimages = [];
 
+
+function storePreviousImage() {
+    console.log("storePreviousImage called");
+    const img = document.getElementById('photo');
+    const currentSrc = img.src;
+    console.log(currentSrc);
+    if (currentSrc) {
+        previousimages.push(currentSrc);
+        console.log("previousimages");
+    }
+}
 
