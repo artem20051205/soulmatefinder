@@ -63,7 +63,7 @@ function getRandomPhoto(choice) {
 
 
   // Één random percentage voor links & rechts
-  const rand = Math.floor(Math.random() * (40 - 5 + 1)) + 5;
+  const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
 
   document.querySelector('.left').style.background =
     `linear-gradient(
