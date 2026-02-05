@@ -107,8 +107,21 @@ function getRandomPhoto(choice) {
       rgba(237, 221, 83, 1) 100%
     )`;
 
-
+    percentageText.textContent = `Gevuld: ${rand}% `;
+}
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
 }
 
 
 
+
+
+
+
+
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
+}

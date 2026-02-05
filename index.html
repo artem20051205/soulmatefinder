@@ -2,55 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/stylesheet.css">
-  <script src="./main.js" defer></script>
-  <link src="./main.js" defer>
-  </link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <script src="./main.js" defer></script>
+    <link src="./main.js" defer>
+    </link>
+
 </head>
-
 <body>
-  <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
 
-  <div id="main-container" class="main-container">
-    <div class="left-section">
-      <div id="importPhoto">
-        <div id="importPhotoButton">
-          <input type="file" accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-          <label for="file" id="import">upload</label>
-        </div>
-        <div id="imgBox">
-        </div>
-      </div>
-    </div>
-    <div class="center-section">
-        <div class="heart">
-          <span class="left"></span>
-          <span class="right"></span>
-        </div>
-      <div>
-        <button id="foto_button" class="playwrite-nz-basic" onclick="getRandomPhoto('man')">Get random
-          photo</button>
-      </div>
-    </div>
-    <div id="right-section">
-      <div>
-        <img id="photo" src="main.js" alt="Random Celebrity Photo" width="300" height="400">
-        <img src="" alt="">
-        <script>
-          var textbox = document.getElementById("imgBox");
-          var loadFile = function (event) {
-            imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
-          }
 
-        </script>
-      </div>
-    </div>
+    <audio src="./audio/backgoundAudio.mp3" autoplay loop></audio>
+    <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
+    <body>
+    <div id="main-container" class="main-container">
+        <div class="left-section">
+            <div id="importPhoto">
+                <div id="importPhotoButton">
+                    <input type="file" accept="image/*" name="image" id="file" style="display: none;"
+                        onchange="loadFile(event)">
+                    <label for="file" id="import">upload</label>
+                </div>
+                <div id="imgBox">
+                </div>
+            </div>
+        </div>
+
+        <div class="center-section" text-align="center">
+            
+                <div class="percentage" id="percentage">Klik op het hart</div>
+            <div class="heart">
+                <span class="left"></span>
+                <span class="right"></span>
+            </div>
+            <select id="genderSelect">
+                <option value="man">Man</option>
+                <option value="vrouw">Vrouw</option>
+                <option value="random">Random</option>
+            </select>
+
+            <button onclick="choosePhoto()">
+                Get Photo
+            </button>
+        </div>
+        <div id="right-section">
+            <div>
+                <img id="photo" src="main.js" alt="wait..." width="300" height="400">
+                <img src="" alt="">
+                <script>
+                    var textbox = document.getElementById("imgBox");
+                    var loadFile = function (event) {
+                        imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                    }
+
+                </script>
+            </div>
+        </div>
+    </body>
+    
 </body>
 
 </html>
