@@ -1,3 +1,8 @@
+
+
+
+
+
 let photos_mens = [
     "man/Albert Einstein.png",
     "man/Atkinson_Rowan_crop.jpg",
@@ -56,6 +61,12 @@ let fotos_vrouw = [
     "vrouw/zendaya.png"
 ];
 
+let previousimages = [];
+
+const saved = localStorage.getItem("previousimages");
+if (saved) {
+    previousimages = JSON.parse(saved);
+}
 
 function getRandomPhoto(choice) {
     const photos1 = photos_mens;
@@ -83,20 +94,28 @@ function getRandomPhoto(choice) {
         img.src = photo;
         console.log(photo);
     }
-}
 
-let previousimages = [];
-
-
-function storePreviousImage() {
+    
     console.log("storePreviousImage called");
     const img = document.getElementById('photo');
     const currentSrc = img.src;
     console.log(currentSrc);
     if (currentSrc) {
         previousimages.push(currentSrc);
-        console.log("previousimages");
+        console.log(previousimages);
     }
+   if (currentSrc) {
+    previousimages.push(currentSrc);
+    localStorage.setItem("previousimages", JSON.stringify(previousimages));
 }
+console.log("saved =" + saved)
+    
+}
+
+
+
+
+
+
 
 
