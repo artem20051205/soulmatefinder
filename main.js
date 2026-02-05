@@ -83,6 +83,11 @@ function getRandomPhoto(choice) {
         img.src = photo;
         console.log(photo);
     }
+    
 }
 
 
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
+}
