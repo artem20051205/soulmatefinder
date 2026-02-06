@@ -155,3 +155,7 @@ function showPreviousPhoto() {
 
 
 
+function choosePhoto() {
+    const gender = document.getElementById("genderSelect").value;
+    getRandomPhoto(gender);
+}
