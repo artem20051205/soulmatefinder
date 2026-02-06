@@ -14,60 +14,62 @@
     </link>
 
 </head>
+
 <body>
 
 
     <audio src="./audio/backgoundAudio.mp3" autoplay loop></audio>
     <h1 id="tittle" class="playwrite-nz-basic">your celebrity soulmate</h1>
+
     <body>
-    <div id="main-container" class="main-container">
-        <div class="left-section">
-            <div id="importPhoto">
-                <div id="importPhotoButton">
-                    <input type="file" accept="image/*" name="image" id="file" style="display: none;"
-                        onchange="loadFile(event)">
-                    <label for="file" id="import">upload</label>
+        <div id="main-container" class="main-container">
+            <div class="left-section">
+                <div id="importPhoto">
+                    <div id="importPhotoButton">
+                        <input type="file" accept="image/*" name="image" id="file" style="display: none;"
+                            onchange="loadFile(event)">
+                        <label for="file" id="import">upload</label>
+                    </div>
+                    <div id="imgBox">
+                    </div>
                 </div>
-                <div id="imgBox">
+            </div>
+
+            <div class="center-section" text-align="center">
+
+                <div class="percentage" id="percentage">...</div>
+                <div class="heart">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </div>
+                <select id="genderSelect">
+                    <option value="man">Man</option>
+                    <option value="vrouw">Vrouw</option>
+                    <option value="random">Random</option>
+                </select>
+
+                <button onclick="choosePhoto()">
+                    Get Photo
+                </button>
+                <button id="previousPhoto" onclick="showPreviousPhoto()">
+                    previous
+                </button>
+            </div>
+            <div id="right-section">
+                <div>
+                    <img id="photo" src="main.js" alt="wait..." width="300" height="400">
+                    <img src="" alt="">
+                    <script>
+                        var textbox = document.getElementById("imgBox");
+                        var loadFile = function (event) {
+                            imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+                        }
+
+                    </script>
                 </div>
             </div>
-        </div>
-
-        <div class="center-section" text-align="center">
-            
-                <div class="percentage" id="percentage">Klik op het hart</div>
-            <div class="heart">
-                <span class="left"></span>
-                <span class="right"></span>
-            </div>
-            <select id="genderSelect">
-                <option value="man">Man</option>
-                <option value="vrouw">Vrouw</option>
-                <option value="random">Random</option>
-            </select>
-
-            <button onclick="choosePhoto()">
-                Get Photo
-            </button>
-            <button id="previousPhoto" onclick="showPreviousPhoto()">
-                previous
-            </button>
-        </div>
-        <div id="right-section">
-            <div>
-                <img id="photo" src="main.js" alt="wait..." width="300" height="400">
-                <img src="" alt="">
-                <script>
-                    var textbox = document.getElementById("imgBox");
-                    var loadFile = function (event) {
-                        imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
-                    }
-
-                </script>
-            </div>
-        </div>
     </body>
-    
+
 </body>
 
 </html>

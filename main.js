@@ -99,7 +99,7 @@ function getRandomPhoto(choice) {
     console.log("storePreviousImage called");
     const img = document.getElementById('photo');
     const currentSrc = img.src;
-
+    const percentageText = document.getElementById('percentage') || document.getElementById('percentageText');
     if (currentSrc) {
         previousimages.push(currentSrc);
         localStorage.setItem("previousimages", JSON.stringify(previousimages));
@@ -109,7 +109,7 @@ function getRandomPhoto(choice) {
   // Één random percentage voor links & rechts
   const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
 
-  document.querySelector('.left').style.background =
+    document.querySelector('.left').style.background =
     `linear-gradient(
       50deg,
       rgb(233, 1, 1) ${rand}%,
@@ -125,7 +125,9 @@ function getRandomPhoto(choice) {
       rgba(237, 221, 83, 1) 100%
     )`;
 
-    percentageText.textContent = `Gevuld: ${rand}% `;
+    if (percentageText) {
+        percentageText.textContent = `Gevuld: ${rand}% `;
+    }
 }
 function choosePhoto() {
     const gender = document.getElementById("genderSelect").value;
