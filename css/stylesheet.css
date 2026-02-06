@@ -41,14 +41,6 @@ body {
     height: 460px;
     width: 400px;
 }
-#imgBox{
-    height: 400px;
-    width: 325px;
-    background-color: rgb(86, 77, 77);
-    margin-top: -500px;
-    margin-left: 37px;
-    background-size: cover;
-}
 #importPhoto{
   
     margin-top: 850px;
@@ -59,10 +51,11 @@ body {
 #imgBox{
     height: 400px;
     width: 325px;
-    background-color: rgb(86, 77, 77);
+    background: linear-gradient(to bottom right, #ff9b9b, #dc0000);
     margin-top: -500px;
     margin-left: 37px;
     background-size: cover;
+    border-radius: 25px;
 }
 #importPhotoButton{
     height: 50px;
