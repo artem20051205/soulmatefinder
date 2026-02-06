@@ -99,10 +99,14 @@ body {
     justify-content: space-between;
     align-items: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border: #ffffff;
     
     
     
+=======
+    position: absolute;
+>>>>>>> parent of f5818bf (removed position absolute)
 =======
     position: absolute;
 >>>>>>> parent of f5818bf (removed position absolute)
