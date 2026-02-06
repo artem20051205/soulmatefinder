@@ -64,6 +64,7 @@ let fotos_vrouw = [
 ];
 
 let previousimages = [];
+let previousPercentages =[];
 
 const saved = localStorage.getItem("previousimages");
 if (saved) {
@@ -128,7 +129,7 @@ function getRandomPhoto(choice) {
     )`;
 
     if (percentageText) {
-        percentageText.textContent = `Gevuld: ${rand}% `;
+        percentageText.textContent = `match: ${rand}% `;
     }
 }
 function choosePhoto() {
