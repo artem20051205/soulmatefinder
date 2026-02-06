@@ -39,7 +39,9 @@ let photos_mens = [
     "man/Thanos.jpeg",
     "man/Walter_White.png",
     "man/Will_s.jpg",
-    "man/Yoda.png"
+    "man/Yoda.png",
+    "man/hans.png",
+    "man/lamaman.png"
 ];
 
 let fotos_vrouw = [

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(https://media.discordapp.net/attachments/1467804562311217175/1468220058676494481/1322603.png?ex=698685bc&is=6985343c&hm=2c8e1b47ed61668da6277fa90b79f4db86a90e93a35b25df2797b2586c832457&=&format=webp&quality=lossless&width=3072&height=1728)   ;
+    background-image: url( https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/512672612_9758764727568439_1822527922494571957_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VzNY2qnnwwUQ7kNvwFMxLWe&_nc_oc=AdlB8wQLGFxFLoewCo2-GB3W1EMclm2HDI5GrIGyzAGdyci-JXblhr3C-i_n0wZBTAc&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=xLPZQ7Qrf_HurobFJiAX8Q&oh=00_AfuFDTuwXRyQiS2vtkDro2vbxqaDD7fLJdlYeel4d6yMQg&oe=698B7CA6)   ;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -63,7 +63,7 @@ body {
 
 #imgBox {
     aspect-ratio: 13 / 16;
-    background-color: rgb(86, 77, 77);
+    background: linear-gradient(135deg, #fff8f8, #ff0073);
     background-size: cover;
     background-position: center;
     width: 100%;
