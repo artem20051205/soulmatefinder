@@ -30,14 +30,14 @@ body {
 }
 #userphoto{
     margin-top: 150px;
-    border: #ffffff 2px solid;
+    
     height: 400px;
     width: 400px;
 }
 #importPhoto{
   
     margin-top: 150px;
-    border: #ffffff 2px solid;
+    
     height: 460px;
     width: 400px;
 }
@@ -51,8 +51,8 @@ body {
 }
 #importPhoto{
   
-    margin-top: 150px;
-    border: #ffffff 2px solid;
+    margin-top: 850px;
+    
     height: 460px;
     width: 400px;
 }
@@ -168,4 +168,15 @@ body {
   position: relative;
   width: 200px;
   height: 150px;
+}
+.percentage {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+#previousPhoto{
+    position: absolute;
+    margin-left: -100px;
+    margin-top:50px;
 }

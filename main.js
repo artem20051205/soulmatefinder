@@ -85,8 +85,26 @@ function getRandomPhoto(choice) {
         const img = document.getElementById('photo');
         img.src = photo;
         console.log(photo);
+    } else if (choice === "random") {
+        const allPhotos = photos1.concat(photos2);
+        if (allPhotos.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * allPhotos.length);
+        const photo = allPhotos[randomIndex];
+        const img = document.getElementById('photo');
+        img.src = photo;
+        console.log(photo);
     }
 
+
+    console.log("storePreviousImage called");
+    const img = document.getElementById('photo');
+    const currentSrc = img.src;
+
+    if (currentSrc) {
+        previousimages.push(currentSrc);
+        localStorage.setItem("previousimages", JSON.stringify(previousimages));
+    }
+    console.log("saved =" + saved)
 
   // Één random percentage voor links & rechts
   const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
@@ -115,13 +133,23 @@ function choosePhoto() {
 }
 
 
+function showPreviousPhoto() {
+      if (previousimages.length < 2) {
+        alert("Geen vorige foto beschikbaar");
+        return;
+    }
+     previousimages.pop();
 
+    // pak vorige
+    const previousPhoto = previousimages[previousimages.length - 1];
 
+    document.getElementById("photo").src = previousPhoto;
 
-
-
-
-function choosePhoto() {
-    const gender = document.getElementById("genderSelect").value;
-    getRandomPhoto(gender);
+    // update localStorage
+    localStorage.setItem("previousimages", JSON.stringify(previousimages));
 }
+
+
+
+
+
