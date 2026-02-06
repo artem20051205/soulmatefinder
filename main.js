@@ -39,7 +39,9 @@ let photos_mens = [
     "man/Thanos.jpeg",
     "man/Walter_White.png",
     "man/Will_s.jpg",
-    "man/Yoda.png"
+    "man/Yoda.png",
+    "man/hans.png",
+    "man/lamaman.png"
 ];
 
 let fotos_vrouw = [
@@ -99,31 +101,35 @@ function getRandomPhoto(choice) {
     console.log("storePreviousImage called");
     const img = document.getElementById('photo');
     const currentSrc = img.src;
-
+    const percentageText = document.getElementById('percentage') || document.getElementById('percentageText');
     if (currentSrc) {
         previousimages.push(currentSrc);
         localStorage.setItem("previousimages", JSON.stringify(previousimages));
     }
     console.log("saved =" + saved)
 
-    // Één random percentage voor links & rechts
-    const rand = Math.floor(Math.random() * (40 - 5 + 1)) + 5;
+  // Één random percentage voor links & rechts
+  const rand = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
 
     document.querySelector('.left').style.background =
-        `linear-gradient(
+    `linear-gradient(
       50deg,
       rgb(233, 1, 1) ${rand}%,
       rgba(87, 199, 133, 1) 50%,
       rgba(237, 221, 83, 1) 100%
     )`;
 
-    document.querySelector('.right').style.background =
-        `linear-gradient(
+  document.querySelector('.right').style.background =
+    `linear-gradient(
       -50deg,
       rgb(226, 6, 6) ${rand}%,
       rgba(87, 199, 133, 1) 50%,
       rgba(237, 221, 83, 1) 100%
     )`;
+
+    if (percentageText) {
+        percentageText.textContent = `Gevuld: ${rand}% `;
+    }
 }
 function choosePhoto() {
     const gender = document.getElementById("genderSelect").value;
